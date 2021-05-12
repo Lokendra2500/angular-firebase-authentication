@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-fire-auth-8ca10": {
+      "hosting": {
+        "angular-fire-auth": [
+          "angular-fire-auth-8ca10"
+        ]
+      }
+    }
+  }
+}
