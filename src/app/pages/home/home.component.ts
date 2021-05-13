@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../../service/auth/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  user: any;
+  constructor(
+    public authService: AuthService
+  ) {
+    const data = localStorage.getItem('user');
+    if (data) {
+      this.user = JSON.parse(data);
+    }
+  }
 
   ngOnInit(): void {
   }

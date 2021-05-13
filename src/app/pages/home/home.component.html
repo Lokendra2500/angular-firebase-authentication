@@ -1,1 +1,35 @@
-<p>home works!</p>
+<div class="container pt-3">
+  <div class="row justify-content-sm-center">
+    <div class="col-sm-12 col-md-6">
+      <div class="card border-success">
+        <div class="card-header">
+          User Details
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="../../../assets/user.png" width="100%">
+            </div>
+            <div class="col-md-8">
+              <div class="form-group mb-2">
+                <label>UID:</label>
+                <input type="text" class="form-control" [value]="user.uid" readonly />
+              </div>
+              <div class="form-group mb-2">
+                <label>Email:</label>
+                <input type="text" class="form-control" [value]="user.email" readonly />
+              </div>
+              <div class="form-group mb-2">
+                <label>Created At:</label>
+                <input type="text" class="form-control" [value]="user.createdAt | date: 'short'" readonly />
+              </div>
+              <div class="">
+                <button class="btn btn-danger btn-block" (click)="authService.logout()">Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
